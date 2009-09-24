@@ -17,6 +17,9 @@ In your view file, use +link_to_print+ as you would +link_to_function+:
   link_to_print "Super Trendy Report", :url => report_path(@super_trendy_report)
   link_to_print "Sweet News Article", :url => "http://articles.com/xyz-article"
 
+The link will prompt the user with a print dialog box to send the contents of URL specified 
+to their printer.
+
 == Implementation
 
 link_to_print embeds an <iframe> tag into the document upon clicking and loads
