@@ -1,0 +1,30 @@
+= link_to_print
+
+== Description
+
++link_to_print+ is a Rails plugin which provides a link helper to assist 
+in creating links to print remote pages.  I created it initially to allow 
+printing one controller action from another.
+
+== Install
+
+<tt>
+  script/plugin install git://github.com/teejayvanslyke/link_to_print.git
+</tt>
+
+== Usage
+
+  In your view file, use +link_to_print+ as you would +link_to_function+:
+
+  <tt>
+    link_to_print "Super Trendy Report", :url => report_path(@super_trendy_report)
+    link_to_print "Sweet News Article", :url => "http://articles.com/xyz-article"
+  </tt>
+
+== Implementation
+
+  +link_to_print embeds an +<iframe>+ tag into the document upon clicking and loads
+  the supplied URL.  It then calls +window.print()+ in the context of the +<iframe>+'s 
+  window.
+
+
